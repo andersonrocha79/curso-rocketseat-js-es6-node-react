@@ -1,0 +1,56 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso JavaScript - módulo 2 - exercício 2</title>
+    </head>
+
+    <body>
+
+        <button id="botao">Criar quadrado vermelho</button>
+
+        <script>
+
+            var buttonElement = document.getElementById("botao");
+            buttonElement.onclick = criarQuadrado;            
+
+            function criarQuadrado()
+            {
+
+                // criando um elemento na DOM
+                // cria uma div que vai virar um quadrado vermelho
+                var divElement = document.createElement("div");
+                divElement.style.width = 100;
+                divElement.style.height = 100;
+                divElement.style.marginTop = 20;
+                divElement.style.backgroundColor = "#f00";    
+
+                divElement.onmouseenter = function()
+                {
+                    // gera uma cor aleatória
+                    var newColor = getRandomColor(); // #E943F            
+                    divElement.style.backgroundColor = newColor;     
+                }
+
+                var containerElement = document.querySelector("body");
+                containerElement.appendChild(divElement);
+
+            }
+
+            function getRandomColor() 
+            {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) 
+                {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+        
+        
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,39 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercício 4 - módulo 1</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            function experiencia(anos)
+            {
+
+                console.log("idade informada: " + anos);
+
+                if (anos <= 1)
+                    return "experiencia: iniciante";
+                else if (anos >= 1 && anos <= 3)
+                    return "experiencia: intermediario";
+                else if (anos >= 3 && anos <= 6)
+                    return "experiencia: avançado";
+                else if (anos >= 7)
+                    return "experiencia: jedi master";
+                else
+                    return "indefinido";
+
+            }
+
+            var anosEstudo = 8;
+
+            var retorno = experiencia(anosEstudo);
+            console.log(retorno);
+
+        </script>
+
+    </body>
+
+</html>

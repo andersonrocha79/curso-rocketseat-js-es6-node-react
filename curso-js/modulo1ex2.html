@@ -1,0 +1,39 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercício 2 - módulo 1</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            function numeros_pares(x, y)
+            {
+                if (x > y)
+                {
+                    console.log("intervalo inválido");
+                }
+                else
+                {
+
+                    while (x <= y)
+                    {
+                        var modulo = (x % 2);
+                        // se tiver resto na divisão, significa que é par
+                        if (modulo == 0)
+                        {
+                            console.log(x);
+                        }
+                        x++;
+                    }
+                }
+            }
+
+            numeros_pares(-55,988)        
+
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,35 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercício 1 - módulo 1</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            var endereco = 
+            {
+                rua: "Fernando Goncalves da Silva",
+                numero: 744,
+                complemento: "apartamento 202",
+                bairro: "Novo Campinho",
+                cidade: "Pedro Leopoldo",
+                uf: "MG"
+            }            
+
+            function imprime_endereco(end)
+            {
+                console.log("O usuário mora em "  + end.cidade + "/" + end.uf + 
+                            ", no bairro " + end.bairro + 
+                            ", na rua "    + end.rua    +
+                            " no numero "  + end.numero);
+            }
+        
+            imprime_endereco(endereco);        
+        
+        </script>
+    </body>
+
+</html>

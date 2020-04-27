@@ -1,0 +1,38 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso JavaScript - módulo 2 - exercício 1</title>
+    </head>
+
+    <body>
+
+        <button id="botao">Criar quadrado vermelho</button>
+
+        <script>
+
+            var buttonElement = document.getElementById("botao");
+            buttonElement.onclick = criarQuadrado;            
+
+            function criarQuadrado()
+            {
+
+                // criando um elemento na DOM
+                // cria uma div que vai virar um quadrado vermelho
+                var divElement = document.createElement("div");
+                divElement.style.width = 100;
+                divElement.style.height = 100;
+                divElement.style.marginTop = 20;
+                divElement.style.backgroundColor = "#f00";    
+
+                var containerElement = document.querySelector("body");
+                containerElement.appendChild(divElement);
+
+            }
+        
+        
+        </script>
+
+    </body>
+
+</html>

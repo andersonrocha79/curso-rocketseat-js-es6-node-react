@@ -1,0 +1,36 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercício 3 - módulo 1</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            function temHabilidade(skills, palavra)
+            {
+                if (skills.includes(palavra))
+                {
+                    console.log("palavra encontrada");
+                }
+                else
+                {
+                    console.log("palavra não encontrada");
+                }
+
+            }
+
+            var skills = ["anderson", "hiriane", "sabrina", "philipe", "nicolle", "neide", "tatao"];
+            var palavra = "tatao"            
+            console.log("array: " + skills);
+            console.log("palavra: " + palavra);   
+            console.log("------------------------------");   
+            temHabilidade(skills, palavra);   
+
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,123 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso JavaScript - módulo 2</title>
+    </head>
+
+    <body>
+
+        <div id="app">
+            <input onkeypress="mostraAlerta3()">
+            <button onclick="mostraAlerta()">Me pressione</button>
+        </div>
+
+        <div id="app2">
+            <input type="text" name="nome" id="nome">
+            <button class="botao" onmouseover="mostraAlerta2()">botao 1</button> 
+        </div> 
+        
+        <div id="app3">
+            <input type="text" name="anderson">
+            <button class="botao">botao 2</button> 
+        </div>    
+        
+        <div id="app3">
+            <input type="text" name="botaoteste">
+            <button class="teste">botao 3 teste</button> 
+        </div>        
+        
+        <div id="app4">
+            <button class="botao" name="botaoexcluir" id="botaoexcluir">botao excluir</button> 
+        </div>
+        
+        <div id="app5">
+            <div class="box"></div> 
+        </div>          
+        
+        <script>
+
+            // app 1
+            function mostraAlerta()
+            {
+                alert("botão foi clicado");
+            }
+
+            function mostraAlerta2()
+            {
+                alert("o cursor do mouse deixou o botão");
+            }
+
+            function mostraAlerta3()
+            {
+                alert("o texto foi digitado");
+            }       
+
+            // app 2
+            // retorna o elemento com o id "nome"
+            var inputElement = document.getElementById("nome");
+            console.log("id nome: ");    
+            console.log(inputElement);    
+
+            // retorna uma lista com todos os inputs da tela (array)
+            var listaInput = document.getElementsByTagName("input");
+            console.log("todos os inputs: "); 
+            console.log(listaInput); 
+
+            // retorna uma lista com todos elementos que tem a mesma classe
+            var listaclasses = document.getElementsByClassName("botao");
+            console.log("todos objetos da classe botao: ");             
+            console.log(listaclasses);   
+
+            // percorrendo a estrutura da arvore dom
+            var input2 = document.querySelector("body div#app3 input");
+            console.log("objeto pelo queryselector: ");             
+            console.log(input2);   
+
+            var input3 = document.querySelector("input[name=nome]");
+            console.log("objeto pelo queryselector > input com name = nome: ");             
+            console.log(input3); 
+
+            var todosInputs = document.querySelectorAll("input");
+            console.log("objeto pelo queryselector > todos os inputs da tela:");             
+            console.log(todosInputs);   
+
+            var inputElement = document.querySelector("input[name=nome]");
+            var btnElement = document.querySelector("button.teste");
+            btnElement.onclick = function()
+            {
+                var texto = inputElement.value;
+                alert("botao 3 da classe teste foi clicado - Texto: " + texto);
+            }     
+
+            // criando um elemento na DOM
+            // criar um link para um site manualmente
+            var linkElement = document.createElement("a");
+            linkElement.setAttribute("href", "http://www.rochasoft.com.br");
+            linkElement.setAttribute("title", "Site da RochaSoft");
+            var textElement = document.createTextNode("Acessar site da rocha software");
+            linkElement.appendChild(textElement);
+
+            var containerElement = document.querySelector("#app4");
+            containerElement.appendChild(linkElement);
+
+            // removendo um elemento
+            var btnElement = document.querySelector("#botaoexcluir");
+            btnElement.onclick = function()
+            {
+                alert("o botão será excluido");
+                var inputElement = document.querySelector("#botaoexcluir");
+                containerElement.removeChild(inputElement);
+            }        
+
+            // definindo os atributos do css via javascript
+            var boxElement = document.querySelector(".box");
+            boxElement.style.width = 100;
+            boxElement.style.height = 100;
+            boxElement.style.backgroundColor = "#f00"; 
+
+        </script>  
+
+    </body>
+
+</html>

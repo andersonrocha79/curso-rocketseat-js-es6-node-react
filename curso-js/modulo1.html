@@ -1,0 +1,231 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso JavaScript - módulo 1</title>
+    </head>
+
+    <body>
+        
+        <script>
+
+            function testeVariaveis()
+            {
+
+                // no final do código, para que seja a última coisa a ser carregada
+                // java script
+                console.log('hello world');
+                
+                // variáveis
+                var nome = "Anderson Rocha";
+                var idade = 40;
+                var peso = 80.5;
+                var humano = true;
+                var alunos = ['Anderson', 'Hiriane', 'Philipe', 'Nicolle', 'Sabrina']; // array
+                var aluno = {nome: 'anderson', peso: 80.5, idade: 40, humano: true}; // objeto
+
+                console.log(nome);
+                console.log(aluno);
+                console.log(alunos[1]);
+                console.log('peso...: ' + aluno.peso);
+                console.log('idade..: ' + aluno.idade);
+
+                var x = 10;
+                var y = 5;
+
+                x = x + 3;
+                x += 3;
+                y *= y; 
+
+                var resultado = x + y;
+
+                console.log(x, y);
+                console.log(resultado);
+
+            }
+
+            function soma(numero1, numero2)
+            {
+                var resultado = numero1 + numero2;
+                return resultado;
+            }
+
+            function retornaSexo(sexo)
+            {
+                // M ou F
+                if (sexo == "M")
+                {
+                    return "Masculino";
+                }
+                else if (sexo == "F")
+                {
+                    return "Feminino";
+                }                
+                else
+                {
+                    return "Indefinido";
+                }
+            }
+
+            function retornaSexo2(sexo)
+            {
+                // M ou F
+                switch (sexo)
+                {
+
+                    case "M":
+                        return "Masculino";
+
+                    case "F":
+                        return "Feminino";
+
+                    default:
+                        return "Indefinido";
+
+                }
+
+            }        
+
+            function testeSoma()
+            {
+                console.log("teste função soma")
+                var resultado = soma(25, 30);
+                console.log(resultado);
+            }    
+
+            function testeIf()
+            {
+                console.log("teste função if")
+                var sexo;
+                sexo = retornaSexo("F");
+                console.log(sexo);
+                sexo = retornaSexo("M");
+                console.log(sexo);
+                sexo = retornaSexo("V");
+                console.log(sexo);                
+            }
+
+            function testeSwitch()
+            {
+                console.log("teste função switch")
+                sexo = retornaSexo2("F");
+                console.log(sexo);
+                sexo = retornaSexo2("M");
+                console.log(sexo);
+                sexo = retornaSexo2("V");
+                console.log(sexo);
+            }
+
+            function testeAndOr()
+            {
+
+                var sexo = "M", idade = 23;
+
+                if (sexo === "M" && idade >= 18)
+                {
+                    console.log("Masculino e maior de 18: OK");
+                }
+
+                if (sexo === "F" || idade >= 24)
+                {
+                    console.log("Não vai entrar");
+                }                
+                else 
+                {
+                    console.log("Não e feminino e maior que 24 anos");
+                }     
+
+                if (sexo != "F")
+                {
+                    console.log("não é feminino");
+                }           
+
+                var masculino = (sexo == "M");
+                console.log("masculino: " + masculino);
+
+            }
+
+            function testeCondicaoTernaria()
+            {
+                var sexo = "M";
+                var retorno =  (sexo == "M") ? "Masculino" : "Feminino";
+                console.log("teste condição ternária: " + retorno);
+            }
+
+            function testeFor()
+            {
+                console.log("teste FOR");
+                for (var i = 0; i <= 100; i++)
+                {
+                    console.log(i);
+                }
+            }
+
+            function testeWhile()
+            {
+                console.log("teste WHILE");
+                j = 0;
+                while (j < 100)
+                {
+                    j++;
+                    console.log(j);
+                }
+            }       
+
+            function exibeTexto()
+            {
+                console.log("texto");
+            }
+
+            function exibeTexto2()
+            {
+                console.log("texto 2 - timeout");
+            }            
+
+            function testeInterval()
+            {
+                // executa a função a cada 5 segundos
+                setInterval(exibeTexto, 5000);
+            }     
+
+            function testeTimeOut()
+            {
+                // executa a função uma vez depois do tempo especificado
+                setTimeout(exibeTexto2, 10000);
+            }               
+
+            // teste de variáveis
+            testeVariaveis();
+
+            // teste de operação matemática
+            testeSoma();
+
+            // teste do if
+            testeIf();
+
+            // teste da função (switch)
+            testeSwitch();
+
+            // teste and e or
+            testeAndOr();
+
+            // testa condição ternária
+            testeCondicaoTernaria();
+
+            // teste for
+            testeFor();
+            
+            // teste while
+            testeWhile();        
+
+            // teste Interval
+            testeInterval();   
+
+            // teste TimeOut
+            testeTimeOut(); 
+
+        </script>  
+
+    </body>
+
+</html>

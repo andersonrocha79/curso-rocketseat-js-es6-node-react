@@ -1,0 +1,74 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso JavaScript - módulo 2 - exercício 4</title>
+    </head>
+
+    <body>
+
+        <input type="text" name="nome" id="nome">
+        <button id="botao" name="botao">Adicionar</button>
+
+        <script>
+
+            var nomes = ["Diego", "Gabriel", "Lucas", "Anderson", "Hiriane", "Sebastião", "Neide"];       
+
+            /*
+            <ul>
+                <li>First bullet point</li>
+                <li>Second bullet point</li>
+                <li>Third bullet point</li>
+            </ul>
+            */     
+
+            var ulElement = document.createElement("ul");
+
+            for (var i = 0; i < nomes.length; i++) 
+            {
+                var novoElem  = document.createElement('li');
+                novoElem.innerHTML = nomes[i];
+                ulElement.appendChild(novoElem);
+            }
+
+            var containerElement = document.querySelector("body");
+            containerElement.appendChild(ulElement);
+
+            var buttonElement = document.getElementById("botao");
+            buttonElement.onclick = function()
+            {
+                adicionar()                
+            }
+
+            function adicionar()
+            {
+
+                // captura o nome digitado 
+                var inputElement  = document.getElementById("nome");
+                var nomeInformado = inputElement.value;
+
+                if (nomeInformado == "")
+                {
+                    alert("o nome deve ser informado");
+                }
+                else
+                {
+
+                    // inclui o texto na lista
+                    var novoElem  = document.createElement("li");
+                    novoElem.innerHTML = nomeInformado;
+                    ulElement.appendChild(novoElem);
+
+                    // apaga o conteúdo 
+                    inputElement.value = "";
+
+                }
+
+            }
+
+        
+        </script>
+
+    </body>
+
+</html>

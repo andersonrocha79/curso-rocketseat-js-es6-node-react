@@ -1,0 +1,44 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercício 5 - módulo 1</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            var usuarios = 
+            [
+                {
+                    nome: "Anderson",
+                    habilidades: ["javascript", "reactjs", "redux"]
+                },
+                {
+                    nome: "Gabriel",
+                    habilidades: ["vuejs", "ruby", "elixir"]
+                }
+            ]
+
+            function imprime(user)
+            {
+
+                var habilidades = "";
+
+                for (let hab of user.habilidades)
+                {
+                    habilidades = habilidades + " " + hab;
+                }
+
+                console.log("O " + user.nome + " possui as habilidades: " + habilidades);
+            }            
+        
+            imprime(usuarios[0]);        
+            imprime(usuarios[1]);        
+        
+        </script>
+        
+    </body>
+
+</html>
